@@ -29,8 +29,11 @@
                         {{ __('Inspecionar') }}
                     </x-jet-nav-link>
                 </div>
-
-
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-jet-nav-link href="{{ route('usuario.cadastrar') }}" :active="request()->routeIs('usuario.cadastrar')">               
+                          {{ __('Criar Usuário') }}
+                     </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

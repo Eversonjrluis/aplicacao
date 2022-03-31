@@ -34,9 +34,9 @@
       <td>{{$objeto->user->name}}</td>
       <td>{{$objeto->status_id}}</td>
       <td>
-
-        <img onClick="window.print()" src="{{route('objetos.geraQR',$objeto->id)}}" id='qrcode1' alt="" width="50%" height="50%">
-      
+<a download='QrCode{{$objeto->id}}.png' href="{{route('objetos.geraQR',$objeto->id)}}">
+        <img  src="{{route('objetos.geraQR',$objeto->id)}}"  alt="" width="50%" height="50%">
+</a>      
       </td>
       <td>               
                     <x-jet-nav-link href="{{ route('inspecao.efetuar',$objeto->id) }}" :active="request()->routeIs('inspecao.efetuar')">

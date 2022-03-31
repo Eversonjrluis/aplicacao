@@ -22,11 +22,11 @@ class CadastroInspecoes extends Component
      public $status_id;
      public $inspecao_id;
      public $name;
-
      public $objetos;
      public $tipos;
      public $checklists;
      public $tipo_respostas;
+
 
     public function mount($post)
     {
@@ -45,9 +45,24 @@ class CadastroInspecoes extends Component
         return view('livewire.cadastro-inspecoes');
     }
 
+        protected $rules = [
+          'respostas' => 'required',
+        ];
+
 
     public function create(){
 
+              foreach ($this->checklists as $checklist) {
+       
+                          if (empty($this->respostas[$checklist->id])){
+
+                                      dd('Por favor inspecionar todos itens!');
+
+                                                                      };
+
+                                                        }
+
+$this->validate();
            $insp = inspecoes::create([
                                   'user_id'  => auth()->user()->id,
                                   'objetos_id' => $this->objeto,
@@ -59,8 +74,12 @@ class CadastroInspecoes extends Component
                              ]);
 
       foreach ($this->checklists as $checklist) {
+       
+       if (empty($this->respostas[$checklist->id])){
+        dd('Por favor inspecionar todos itens!');
+       };
             check_logs::create([
-
+                                    
                                     'resposta' => $this->respostas[$checklist->id],
                                     'pergunta' => $checklist->descricao,
                                     'status_id'=> $checklist->status_id,
