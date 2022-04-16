@@ -26,7 +26,7 @@
 
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="descricao" value="{{ __('Descrição') }}" />
-            <x-jet-input id="descricao" wire:model="descricao" type="text" class="mt-1 block w-full"/>
+            <x-jet-input id="descricao" wire:model="descricao" type="text"  class="mt-1 block w-full"/>
             <x-jet-input-error for="descricao" class="mt-2" />
                           
         </div>
@@ -39,7 +39,7 @@
         </div>  
 
        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="Validade" value="{{ __('Validade') }}" />
+            <x-jet-label for="Validade" value="{{ __('Inspecionar a cada quantos dias?') }}" />
             <x-jet-input id="Validade"  type="number"  wire:model="validade" class="mt-1 block w-full"/>
             <x-jet-input-error for="Validade" class="mt-2" />
         </div>

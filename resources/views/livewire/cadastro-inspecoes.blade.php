@@ -37,7 +37,7 @@
 
 @foreach($checklists as $check)
     <tr>
-      <td placeholder="teste">{{$check->descricao}}</td>
+      <td>{{$check->descricao}}</td>
    @if($check->tipo_resp_id == 1)   
       <td><input type="radio" wire:model="respostas.{{$check->id}}"  value="SIM">SIM</td>
       <td><input type="radio" wire:model="respostas.{{$check->id}}"  value="NÃO">NÃO</td>
@@ -69,12 +69,24 @@
    @endif
     </tr>
 @endforeach
-
+     <tr>
+        <td colspan="4">
+        <select name="respostas_conforme" required wire:model="respostas_conforme" class=" alert alert-primary form-control">
+            <option></option>
+           <option value="6">
+               CONFORME
+           </option>
+           <option value="7">
+               NÃO CONFORME
+           </option>
+        </select>    
+        <x-jet-input-error for="respostas_conforme" class="mt-2" />
+      </td>
+     </tr>
 
   </tbody>
 </table>
-  
-   <input class='btn btn-success'  type="submit" >
+   <input class='alert form-control btn btn-success'  type="submit" >
  </div>
 </div>
 </div>
