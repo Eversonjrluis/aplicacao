@@ -27,6 +27,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
       Route::get('/cadastros/extintor',[ObjetosController::class, 'exibeExtintor'])->name('exibe.extintor');
       Route::get('/geraQr/{objeto}',[ObjetosController::class, 'geraQR'])->name('objetos.geraQR');
       Route::get('/inspecionar/{objeto}',[ObjetosController::class, 'inspecionar'])->name('inspecao.efetuar');
-
+      Route::get('/inativarObjt/{objeto}',[ObjetosController::class, 'inativarObjt'])->name('inspecao.inativarObjt');
+      Route::get('/editar/{objeto}',[ObjetosController::class, 'editarobjt'])->name('objt.editar');
+      Route::get('/historico/{objeto}',[ObjetosController::class, 'historicobjt'])->name('objt.historico');
+      Route::get('/inspeçoes/{objeto}',[ObjetosController::class, 'ExibeLogs'])->name('objt.ExibeLogs');
+      Route::get('/inspecao/concluida',[ObjetosController::class, 'inspecaoConcluida'])->name('objt.inspecaoConcluida');
       Route::get('/cadastro/usuario', function(){ return view('auth.register');})->name('usuario.cadastrar');
 });

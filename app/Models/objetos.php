@@ -17,9 +17,21 @@ class objetos extends Model
 
      }
 
+    public function tipo(){
+
+               return $this->hasOne(tipo_objetos::class, 'id', 'tipo_objetos_id');
+
+     }
+
     public function user(){
 
                return $this->hasOne(User::class, 'id', 'responsavel_id');
+
+     }
+
+    public function status(){
+
+               return $this->hasOne(status::class, 'id', 'status_id');
 
      }
 }
