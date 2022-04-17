@@ -23,8 +23,8 @@ font-size:13px;
       <th >Local</th>
       <th >Responsavel</th>
       <th >Dt.Prox.Insp.</th>
-      <th >Situação</th>
-      <th >Status</th>
+      <th >Status Prazo</th>
+      <th >Status Inspeção</th>
       <th >QrCode</th>
       <th >Ações</th>
 
@@ -46,8 +46,8 @@ font-size:13px;
       <td>{{$objeto->locais->descricao}}</td>
       <td>{{$objeto->user->name}}</td>
       <td>{{ date('d/m/Y', strtotime($objeto->data_validade))  }}</td>
-      <td class="alert alert-{{$objeto->status->class}}">{{$objeto->status->descricao}}</td>
-      <td >{{$objeto->status_insp}}</td>
+      <td class="alert btn-{{$objeto->status->class}}">{{$objeto->status->descricao}}</td>
+      <td class="alert btn-{{$objeto->status_ins->class}}">{{$objeto->status_ins->descricao }}</td>
       
 
       <td>
@@ -73,7 +73,7 @@ font-size:13px;
 </div>                    
 <div style="width: 100%;" class="btn btn-sm btn-danger ">
                     <x-jet-nav-link href="{{ route('inspecao.inativarObjt',$objeto->id) }}" :active="request()->routeIs('inspecao.inativarObjt')">
-                        {{ __('Inativar') }}
+                        {{ __('Excluir') }}
                     </x-jet-nav-link>
 </div>      
             

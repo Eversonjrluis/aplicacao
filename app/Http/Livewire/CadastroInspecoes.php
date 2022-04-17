@@ -99,7 +99,7 @@ if($this->respostas_conforme == 7){$valor_result = "NÃO CONFORME";}
                                     'inspecao_id' => $insp->id,
                                     'checklist_id' => 0,
                                     'status_id' => $this->respostas_conforme,
-                                    'user_id'  => auth()->user()->id,
+                                    
 
                                ]);
               // $this->emit('saved');
@@ -109,6 +109,7 @@ if($this->respostas_conforme == 7){$valor_result = "NÃO CONFORME";}
             $data_insp = date('Y-m-d', strtotime("+".$table->validade." days",strtotime($dt)));
             $table->data_validade = $data_insp;
             $table->status_insp = $this->respostas_conforme;
+            $table->status_id  = 4;
             $table->save();
 
                return redirect()->to('/inspecao/concluida');

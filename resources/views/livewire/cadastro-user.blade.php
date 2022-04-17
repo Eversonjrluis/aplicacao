@@ -21,6 +21,17 @@
             <x-jet-input-error for="login" class="mt-2" />        
         </div>
 
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="role_id" value="{{ __('Acesso') }}" />
+            <select class="form-control" wire:model="role_id" id="role_id">
+                <option></option>
+                <option value="2">Inspetor</option>
+                <option value="1">Administrador</option>
+            </select>
+            <x-jet-input-error for="role_id" class="mt-2" />        
+        </div>
+
+
 
 
     </x-slot>
