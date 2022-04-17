@@ -34,6 +34,12 @@ class objetos extends Model
                return $this->hasOne(status::class, 'id', 'status_id');
 
      }
+
+    public function status_ins(){
+
+               return $this->hasOne(status::class, 'id', 'status_insp');
+
+     }
 }
 
 

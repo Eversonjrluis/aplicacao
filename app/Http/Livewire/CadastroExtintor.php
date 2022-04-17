@@ -73,7 +73,7 @@ if(empty($this->data_insp)){
             'qtd_mangueiras' => $this->qtd_mangueiras,
             'responsavel_id' => $this->responsavel_id,
             'data_validade' =>  $this->data_insp,
-            'status_insp' =>    1,
+            'status_insp' =>    3,
         ]        
     );
  
