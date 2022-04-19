@@ -72,7 +72,7 @@ class ObjetosController extends Controller
     
     public function geraQR($objeto)
     {
-              return  QRCode::url('http://megatech.systemja.com.br/inspecionar/'.$objeto)
+              return  QRCode::url('http://megabrigada.systemja.com.br/inspecionar/'.$objeto)
                   ->setSize(8)
                   ->setMargin(2)
                   ->png();
