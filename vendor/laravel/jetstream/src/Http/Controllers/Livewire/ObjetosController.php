@@ -17,6 +17,9 @@ class ObjetosController extends Controller
      */
 
     public function __construct(){
+
+          setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+
           $dmenos4 = date('Y-m-d', strtotime("+4 days",strtotime(date("Y-m-d"))));
           $aguardando = objetos::whereDate('data_validade','<',$dmenos4)->update(['status_id' => 3]);
           $atrasados  = objetos::whereDate('data_validade','<',date("Y-m-d"))->update(['status_id' => 5,'status_insp' => 3]);
