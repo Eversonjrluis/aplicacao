@@ -25,6 +25,16 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-jet-nav-link href="{{ route('objt.editarChecklist') }}" :active="request()->routeIs('objt.editarChecklist')">
+                        {{ __('Editar') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
+                    <x-jet-nav-link href="{{ route('usuario.editar') }}" :active="request()->routeIs('usuario.editar')">
+                        {{ __('Usuários') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
                     <x-jet-nav-link href="{{ route('exibe.extintor') }}" :active="request()->routeIs('exibe.extintor')">
                         {{ __('Inspecionar') }}
                     </x-jet-nav-link>
