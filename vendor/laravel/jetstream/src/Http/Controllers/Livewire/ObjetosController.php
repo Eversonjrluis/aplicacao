@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use LaravelQRCode\Facades\QRCode;
 use App\Models\objetos;
+use App\Models\tipo_objetos;
+use App\Models\user;
 
 class ObjetosController extends Controller
 {
@@ -85,6 +87,22 @@ class ObjetosController extends Controller
     {
       
          return view('livewire.inspecao-concluida');
+    }
+
+    public function editarChecklist()
+    {
+
+      if(auth()->user()->role_id <> 1){return "Acesso não permitido!";};
+      $tipo_objetos = tipo_objetos::all();
+          return view('cadastros.editarChecklist',compact('tipo_objetos'));   
+    }
+
+    public function editarUsuario()
+    {
+       if(auth()->user()->role_id <> 1){return "Acesso não permitido!";};
+       $users = user::all();
+          return view('livewire.editar-usuarios',compact('users'));  
+
     }
 
 }
