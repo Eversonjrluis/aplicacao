@@ -17,7 +17,8 @@ var doc = new jsPDF();
     a.href = i.src;
     console.log(i);
     doc.addImage(i,'JPEG',15,40,180,180);
-    doc.text(i.alt, 50, 220);
+    doc.setFontSize(25);
+    doc.text(i.alt, 5, 220);
     doc.addPage();
                              }
 
@@ -40,7 +41,7 @@ doc.save('QrCode.pdf');
 </script>
 <h3>Objetos de Inspeção:</h3>
 <div class='card card-fluid'>
-  <div style="overflow: auto; width: 100%">
+  <div style=" width: 100%">
 <table  class="table  table-fluid table-sm table-hover table-bordered">
   <thead class="thead-dark">
     <tr>

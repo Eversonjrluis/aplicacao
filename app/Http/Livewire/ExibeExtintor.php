@@ -16,6 +16,7 @@ class ExibeExtintor extends Component
 
     public function render()
     {   
+        
         $this->locais = locais::get()->where('ativo','<>','2');
         $this->objetos = objetos::get()->where('ativo','<>','2');
         return view('livewire.exibe-extintor');

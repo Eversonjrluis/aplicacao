@@ -86,7 +86,7 @@ class ObjetosController extends Controller
     public function inspecaoConcluida()
     {
       
-         return view('livewire.inspecao-concluida');
+         return view('cadastros.inspecaoConcluida');
     }
 
     public function editarChecklist()

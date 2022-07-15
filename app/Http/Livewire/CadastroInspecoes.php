@@ -74,6 +74,22 @@ $this->validate();
                                   'ativo' => 1,
                              ]);
 
+
+
+if($this->respostas_conforme == 6){$valor_result = "CONFORME";}
+if($this->respostas_conforme == 7){$valor_result = "NÃO CONFORME";}
+            check_logs::create([
+                                    
+                                    'resposta' => $valor_result,
+                                    'pergunta' => 'Resultado Final',
+                                    'inspecao_id' => $insp->id,
+                                    'checklist_id' => 0,
+                                    'status_id' => $this->respostas_conforme,
+                                    
+
+                               ]);
+
+            
       foreach ($this->checklists as $checklist) {
        
        if (empty($this->respostas[$checklist->id])){
@@ -89,19 +105,10 @@ $this->validate();
                                     'user_id'  => auth()->user()->id,
 
                                ]);
-            }
-if($this->respostas_conforme == 6){$valor_result = "CONFORME";}
-if($this->respostas_conforme == 7){$valor_result = "NÃO CONFORME";}
-            check_logs::create([
-                                    
-                                    'resposta' => $valor_result,
-                                    'pergunta' => 'Resultado Final',
-                                    'inspecao_id' => $insp->id,
-                                    'checklist_id' => 0,
-                                    'status_id' => $this->respostas_conforme,
-                                    
+       }
 
-                               ]);
+
+
               // $this->emit('saved');
 
             $table = objetos::findOrFail($this->objeto);

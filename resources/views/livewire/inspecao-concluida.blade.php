@@ -12,8 +12,14 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"></h5>
-    <p class="card-text"> Existem mais 0 itens para verificar. </p>
-    
+    <p class="card-text"> Existem mais  {{$objs->count()}} itens para verificar. </p>
+      
+     
+      @foreach($objs as $obj)
+         <div class="alert alert-{{$obj->status->class}}">Local:{{$obj->locais->descricao}} - Tipo:{{$obj->descricao}}</div>       
+      @endforeach
+     
+
   </div>
 </div>
 </div>
