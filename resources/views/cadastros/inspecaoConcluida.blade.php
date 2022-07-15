@@ -1,0 +1,4 @@
+
+                    @livewireStyles   
+                     @livewire('inspecao-concluida')                  
+

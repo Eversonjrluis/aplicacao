@@ -29,7 +29,9 @@
     </script>
   </head>
   <body>
+    @can('is_admin')
     <div id="donutchartStatus" style="width: 100%; height: 450px;"></div>
+    @endcan
   </body>
  </html>
 </div>
