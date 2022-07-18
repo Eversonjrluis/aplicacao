@@ -40,7 +40,7 @@ class CadastroInspecoes extends Component
        
      $this->objetos = objetos::findOrFail($this->objeto);
      $this->tipos =  tipo_objetos::findOrFail($this->objetos->tipo_objetos_id);
-     $this->checklists = checklists::where('tipo_objeto_id',$this->tipos->id)->get();
+     $this->checklists = checklists::where('tipo_objeto_id',$this->tipos->id)->where('ativo',1)->get();
      $this->tipo_respostas = tipo_respostas::get();
 
         return view('livewire.cadastro-inspecoes');

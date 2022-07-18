@@ -30,7 +30,7 @@
   </head>
   <body>
     @can('is_admin')
-    <div id="donutchartStatus" style="width: 100%; height: 450px;"></div>
+    <div id="donutchartStatus" style="width: 95%; height: 440px;"></div>
     @endcan
   </body>
  </html>

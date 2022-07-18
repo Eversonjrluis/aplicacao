@@ -35,4 +35,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
       Route::get('/cadastro/usuario', function(){ return view('auth.register');})->name('usuario.cadastrar');
       Route::get('/usuarios/editar', [ObjetosController::class, 'editarUsuario'])->name('usuario.editar');
       Route::get('/inspecao/concluida',[ObjetosController::class, 'inspecaoConcluida']);
+      Route::get('/cadastro/item', [ObjetosController::class, 'CadastroObjeto'])->name('objetos.novo');
+      
 });
