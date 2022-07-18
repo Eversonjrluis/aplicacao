@@ -7,12 +7,15 @@
 
     <div>
         <div class="max-w-full mx-auto py-10 sm:px-6 lg:px-8">
+
+  
+                <div class="mt-10 sm:mt-0">
+                    @livewireStyles   
+                     @livewire('cadastro-extintor')                  
+                </div>
             
 
-                <div class="mt-10 sm:mt-0">
-                    @livewireStyles
-                     @livewire('exibe-extintor')                     
-                </div>
+
             
         </div>
     </div>

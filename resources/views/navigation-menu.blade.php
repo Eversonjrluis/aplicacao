@@ -20,13 +20,13 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
                     <x-jet-nav-link href="{{ route('objetos.create') }}" :active="request()->routeIs('objetos.create')">
-                        {{ __('Cadastros') }}
+                        {{ __('Pré Cadastros') }}
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
                     <x-jet-nav-link href="{{ route('objt.editarChecklist') }}" :active="request()->routeIs('objt.editarChecklist')">
-                        {{ __('Editar') }}
+                        {{ __('Checklist') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-4 sm:flex">
                     <x-jet-nav-link href="{{ route('exibe.extintor') }}" :active="request()->routeIs('exibe.extintor')">
-                        {{ __('Inspecionar') }}
+                        {{ __('Objetos de Inspeção') }}
                     </x-jet-nav-link>
                 </div>
             </div>

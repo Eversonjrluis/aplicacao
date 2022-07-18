@@ -40,6 +40,12 @@ class objetos extends Model
                return $this->hasOne(status::class, 'id', 'status_insp');
 
      }
+
+    public function inspecoes(){
+
+               return $this->hasMany(inspecoes::class, 'objetos_id', 'id');
+
+     }
 }
 
 

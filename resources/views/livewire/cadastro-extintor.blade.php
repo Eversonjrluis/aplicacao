@@ -9,7 +9,7 @@
 
     <x-slot name="form">
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="tipo_item" value="{{ __('Tipo do item') }}" />
+            <x-jet-label for="tipo_item" value="{{ __('Família de inspeção') }}" />
 
             <select id="tipo_objetos_id"  class="block mt-1 w-full" wire:model="tipo_objetos_id" name="tipo_objetos_id">
                 <option>

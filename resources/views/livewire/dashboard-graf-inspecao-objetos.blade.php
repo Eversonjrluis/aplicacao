@@ -29,7 +29,7 @@
     </script>
   </head>
   <body>
-    <div id="donutchart" style="width: 100%; height: 450px;"></div>
+    <div id="donutchart" style="width: 95%; height: 440px;"></div>
   </body>
  </html>
 </div>

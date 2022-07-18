@@ -100,8 +100,16 @@ class ObjetosController extends Controller
     public function editarUsuario()
     {
        if(auth()->user()->role_id <> 1){return "Acesso não permitido!";};
-       $users = user::all();
-          return view('livewire.editar-usuarios',compact('users'));  
+       
+          return view('cadastros.editarUsuarios');  
+
+    }
+
+    public function CadastroObjeto()
+    {
+       if(auth()->user()->role_id <> 1){return "Acesso não permitido!";};
+       
+          return view('cadastros.cadastroObjeto');  
 
     }
 

@@ -33,6 +33,7 @@ class CadastroExtintor extends Component
     public $qtd_mangueiras;
     public $post;
     public $data_insp;
+   
 
 
     protected $rules = [

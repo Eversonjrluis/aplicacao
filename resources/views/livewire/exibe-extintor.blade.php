@@ -39,7 +39,24 @@ doc.save('QrCode.pdf');
     tela_impressao.window.close();
     }
 </script>
+
+
+<div class="row">
+
+<div class="col-md-11">
 <h3>Objetos de Inspeção:</h3>
+</div>
+<div class="col-md-1">
+ <x-jet-nav-link href="{{ route('objetos.novo') }}">
+   <div  style="width: 100%;"class="btn btn-sm btn-primary ">
+                    
+                        {{ __('Cadastrar novo') }}
+                 
+   </div>   
+</x-jet-nav-link>
+</div>
+
+</div>
 <div class='card card-fluid'>
   <div style=" width: 100%">
 <table  class="table  table-fluid table-sm table-hover table-bordered">
